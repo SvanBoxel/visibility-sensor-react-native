@@ -8,17 +8,22 @@
     "test": "echo \"Todo: specify tests\" && exit 0",
     "build": "tsc",
     "build:watch": "tsc -w",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
     "lint": "prettier -c --config .prettierrc 'src/**/*.{ts,tsx}'",
     "lint:fix": "prettier --config .prettierrc 'src/**/*.{ts,tsx}' --write",
-    "version" : "npm run format && git add -A src",
+    "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
-  "keywords": ["React Native", "React", "Viewport"],
+  "keywords": [
+    "React Native",
+    "React",
+    "Viewport"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/react-native": "^0.62.14",
     "react": "^16.9.0",
     "react-dom": "^16.13.1",
     "react-native": "^0.62.2"
@@ -28,5 +33,7 @@
     "prettier": "^2.0.5",
     "typescript": "^3.9.3"
   },
-  "files": ["dist/**/*"]
+  "files": [
+    "dist/**/*"
+  ]
 }
