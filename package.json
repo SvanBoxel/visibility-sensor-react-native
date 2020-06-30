@@ -2,8 +2,8 @@
   "name": "inviewport-react-native",
   "version": "0.1.0",
   "description": "React Native component that helps with determining whether a component is in the viewport.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "test": "echo \"Todo: specify tests\" && exit 0",
     "build": "tsc",
