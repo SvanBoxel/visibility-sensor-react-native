@@ -52,7 +52,7 @@ const Example = props => {
 
 It's not finished and some work has to be done yet.
 
-- Handle offsets. Callback is triggered is 1px is in viewport now. 
+- Handle offsets. Callback if triggered is 1px is in viewport now. 
 - Add correct Typescript types
 - Add tests
 
