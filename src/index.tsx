@@ -43,7 +43,7 @@ const InViewPort: React.FC<Props> = (props) => {
       }
 
       myView.current.measure(
-        async (x: number, y: number, width: number, height: number, pageX: number, pageY: number) => {
+        async (_x: number, _y: number, width: number, height: number, pageX: number, pageY: number) => {
           setDimensions({
             rectTop: pageY,
             rectBottom: pageY + height,

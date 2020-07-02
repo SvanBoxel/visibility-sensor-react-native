@@ -1,19 +1,13 @@
 {
   "name": "inviewport-react-native",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "description": "React Native component that helps with determining whether a component is in the viewport.",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Todo: specify tests\" && exit 0",
-    "build": "tsc",
-    "build:watch": "tsc -w",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "lint": "prettier -c --config .prettierrc 'src/**/*.{ts,tsx}'",
-    "lint:fix": "prettier --config .prettierrc 'src/**/*.{ts,tsx}' --write",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "build": "rollup -c",
+    "build-watch": "rollup -c -w"
   },
   "keywords": [
     "React Native",
@@ -22,18 +16,19 @@
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@types/react-native": "^0.62.14",
-    "react": "^16.9.0",
-    "react-dom": "^16.13.1",
-    "react-native": "^0.62.2"
-  },
   "devDependencies": {
-    "@types/node": "14.0.6",
+    "@types/react-native": "^0.62.0",
     "prettier": "^2.0.5",
+    "rollup": "^1.25.0",
+    "rollup-plugin-typescript2": "^0.24.3",
     "typescript": "^3.9.3"
   },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-native": "^0.62.0"
+  },
+  "typings": "dist/index.d.ts",
   "files": [
-    "dist/**/*"
+    "dist"
   ]
 }
