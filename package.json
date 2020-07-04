@@ -1,6 +1,6 @@
 {
-  "name": "inviewport-react-native",
-  "version": "0.9.0",
+  "name": "visibility-sensor-react-native",
+  "version": "1.0.0",
   "description": "React Native component that helps with determining whether a component is in the viewport.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -18,6 +18,8 @@
   "keywords": [
     "React Native",
     "React",
+    "Visibility",
+    "Visbility sensor",
     "Viewport"
   ],
   "author": "",
