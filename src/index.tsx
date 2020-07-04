@@ -8,13 +8,13 @@ export interface IDemensionData {
 }
 
 export interface Props {
-  /** Function that is triggered when component enters viewport */
+  /** Function that is triggered when component enters the viewport */
   onChange(visible: boolean): any;
   /** The component that needs to be in the viewport */
   children: React.ReactNode;
 }
 
-const InViewPort: React.FC<Props> = (props) => {
+const VisibilitySensor: React.FC<Props> = (props) => {
   const myView: any = useRef(null);
   const [lastValue, setLastValue] = useState<boolean>(false);
   const [dimensions, setDimensions] = useState<IDemensionData>({
@@ -81,4 +81,4 @@ const InViewPort: React.FC<Props> = (props) => {
   );
 };
 
-export default InViewPort;
+export default VisibilitySensor;

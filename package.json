@@ -8,11 +8,11 @@
   "scripts": {
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm run lint",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
     "lint": "prettier -c --config .prettierrc 'src/**/*.tsx'",
     "lint:fix": "prettier --config .prettierrc 'src/**/*.tsx' --write",
-    "version" : "npm run format && git add -A src",
+    "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
   "keywords": [

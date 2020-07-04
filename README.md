@@ -1,5 +1,5 @@
 # React Native visibility sensor component
-React Native component that helps with determining whether a component is in the viewport.
+React Native component that helps with determining whether a component is visible to the user.
 
 Inspired by [react-native-inviewport](https://github.com/yamill/react-native-inviewport) and [react-visibility-sensor](https://github.com/joshwnj/react-visibility-sensor).
 
@@ -14,19 +14,19 @@ All usable with Expo with no extra native dependencies!
 Open a Terminal in the project root and run:
 
 ```sh
-npm install npm inviewport-react-native
+npm install npm visibility-sensor-react-native
 ```
 
 or if you use `yarn`:
 
 ```sh
-yarn add inviewport-react-native
+yarn add visibility-sensor-react-native
 ```
 
 ## Usage
 
 ```javascript
-import BottomSheet from 'reanimated-bottom-sheet'
+import VisibilitySensor from 'visibility-sensor-react-native'
 
 const Example = props => {
   const handleImageVisibility = visible = {
@@ -36,12 +36,12 @@ const Example = props => {
   render() {
     return (
       <View style={styles.container}>
-        <InViewPort onChange={handleImageVisibility}>
+        <VisibilitySensor onChange={handleImageVisibility}>
           <Image
             style={styles.image}
             source={require("../assets/placeholder.png")}
            />
-         </InViewPort>
+         </VisibilitySensor>
     </View>
    )
   }
