@@ -1,10 +1,14 @@
 {
-  "name": "visibility-sensor-react-native",
+  "name": "@svanboxel/visibility-sensor-react-native",
   "version": "1.0.0",
   "description": "React Native component that helps with determining whether a component is in the viewport.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SvanBoxel/visibility-sensor-react-native.git"
+  },
   "scripts": {
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
