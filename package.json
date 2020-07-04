@@ -8,6 +8,7 @@
   "scripts": {
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
+    "test": "npm run lint",
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint",
     "lint": "prettier -c --config .prettierrc 'src/**/*.tsx'",
