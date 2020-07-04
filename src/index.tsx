@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { View, Dimensions } from 'react-native';
 
-export interface IDemensionData {
+export interface IDimensionData {
   rectTop: number;
   rectBottom: number;
   rectWidth: number;
@@ -17,7 +17,7 @@ export interface Props {
 const VisibilitySensor: React.FC<Props> = (props) => {
   const myView: any = useRef(null);
   const [lastValue, setLastValue] = useState<boolean>(false);
-  const [dimensions, setDimensions] = useState<IDemensionData>({
+  const [dimensions, setDimensions] = useState<IDimensionData>({
     rectTop: 0,
     rectBottom: 0,
     rectWidth: 0
