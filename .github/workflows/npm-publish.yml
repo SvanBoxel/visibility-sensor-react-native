@@ -1,6 +1,7 @@
 name: Publish package to npm and gpr
 
 on:
+  workflow_dispatch:
   release:
     types: [created]
 
@@ -25,9 +26,9 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.npm_token }}
 
   publish-gpr:
     needs: build
