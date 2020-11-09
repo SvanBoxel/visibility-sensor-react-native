@@ -14,19 +14,19 @@ All usable with Expo with no extra native dependencies!
 Open a Terminal in the project root and run:
 
 ```sh
-npm install npm visibility-sensor-react-native
+npm install @svanboxel/visibility-sensor-react-native
 ```
 
 or if you use `yarn`:
 
 ```sh
-yarn add visibility-sensor-react-native
+yarn add @svanboxel/visibility-sensor-react-native
 ```
 
 ## Usage
 
 ```javascript
-import VisibilitySensor from 'visibility-sensor-react-native'
+import VisibilitySensor from '@svanboxel/visibility-sensor-react-native'
 
 const Example = props => {
   const handleImageVisibility = visible = {
