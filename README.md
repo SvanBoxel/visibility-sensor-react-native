@@ -29,7 +29,7 @@ yarn add @svanboxel/visibility-sensor-react-native
 import VisibilitySensor from '@svanboxel/visibility-sensor-react-native'
 
 const Example = props => {
-  const handleImageVisibility = visible = {
+  const handleImageVisibility = visible => {
     // handle visibility change
   }
 
