@@ -70,7 +70,9 @@ const VisibilitySensor: React.FC<Props> = (props) => {
     if (lastValue !== isVisible) {
       setLastValue(isVisible);
       props.onChange(isVisible);
-    }
+    }else{
+      props.onChange(isVisible);
+     }
   };
 
   return (
