@@ -7,7 +7,7 @@ All usable with Expo with no extra native dependencies!
 
 <img src="https://user-images.githubusercontent.com/24505883/86367545-608c5e80-bc7c-11ea-89b0-76699e84d785.gif" width="300" />   | <img src="https://user-images.githubusercontent.com/24505883/86367431-3aff5500-bc7c-11ea-90ca-7c8f1ef9dfe6.gif" width="280" />
 :---------------:|:----------------:|
-| 🐶 visible vertical? |  🐶 visible horizontal?   |
+| 🐶 visible Horizontal? |  🐶 visible Vertical ?   |
 
 ## Installation
 
