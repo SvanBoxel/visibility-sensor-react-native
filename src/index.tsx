@@ -14,7 +14,10 @@ export interface Props {
   children: React.ReactNode;
 }
 
-const VisibilitySensor: React.FC<Props> = (props) => {
+const VisibilitySensor: React.FC<Props> = ({
+  children,
+  onChange,
+}) => {
   const myView: any = useRef(null);
   const [lastValue, setLastValue] = useState<boolean>(false);
   const [dimensions, setDimensions] = useState<IDimensionData>({
@@ -69,15 +72,15 @@ const VisibilitySensor: React.FC<Props> = (props) => {
 
     if (lastValue !== isVisible) {
       setLastValue(isVisible);
-      props.onChange(isVisible);
+      onChange(isVisible);
     } else {
-      props.onChange(isVisible);
+      onChange(isVisible);
     }
   };
 
   return (
-    <View collapsable={false} ref={myView} {...props}>
-      {props.children}
+    <View collapsable={false} ref={myView}>
+      {children}
       <View />
     </View>
   );
