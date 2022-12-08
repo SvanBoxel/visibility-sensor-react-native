@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, ReactNode, FC } from 'react';
 import { View, Dimensions } from 'react-native';
 
 export interface IDimensionData {
@@ -11,10 +11,15 @@ export interface Props {
   /** Function that is triggered when component enters the viewport */
   onChange(visible: boolean): any;
   /** The component that needs to be in the viewport */
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const VisibilitySensor: React.FC<Props> = (props) => {
+const RNView = View as any
+
+const VisibilitySensor: FC<Props> = ({
+  children,
+  onChange,
+}) => {
   const myView: any = useRef(null);
   const [lastValue, setLastValue] = useState<boolean>(false);
   const [dimensions, setDimensions] = useState<IDimensionData>({
@@ -69,17 +74,17 @@ const VisibilitySensor: React.FC<Props> = (props) => {
 
     if (lastValue !== isVisible) {
       setLastValue(isVisible);
-      props.onChange(isVisible);
+      onChange(isVisible);
     } else {
-      props.onChange(isVisible);
+      onChange(isVisible);
     }
   };
 
   return (
-    <View collapsable={false} ref={myView} {...props}>
-      {props.children}
+    <RNView collapsable={false} ref={myView}>
+      {children}
       <View />
-    </View>
+    </RNView>
   );
 };
 
