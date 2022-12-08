@@ -21,7 +21,7 @@ const VisibilitySensor: FC<Props> = ({
   onChange,
 }) => {
   const myView: any = useRef(null);
-  const [lastValue, setLastValue] = useState<boolean>(false);
+  const [lastValue, setLastValue] = useState<boolean | null>(null);
   const [dimensions, setDimensions] = useState<IDimensionData>({
     rectTop: 0,
     rectBottom: 0,
@@ -31,7 +31,6 @@ const VisibilitySensor: FC<Props> = ({
   let interval: any = null;
 
   useEffect(() => {
-    setLastValue(false);
     startWatching();
     isInViewPort();
     return stopWatching;
