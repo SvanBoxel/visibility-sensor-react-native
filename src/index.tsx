@@ -60,7 +60,7 @@ const VisibilitySensor: FC<Props> = ({
   };
 
   const stopWatching = () => {
-    interval = clearInterval(interval);
+    clearInterval(interval);
   };
 
   const isInViewPort = () => {
